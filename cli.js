@@ -20,4 +20,4 @@ function dirTree(filename) {
     return info;
 }
 
-console.log(JSON.stringify(dirTree("."  ),null,2));
+console.log(JSON.stringify(dirTree("."),null,2));
