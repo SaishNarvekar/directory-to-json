@@ -1,0 +1,14 @@
+{
+    "name": "directory-to-json",
+    "version": "0.1.0",
+    "description": "",
+    "main": "cli.js",
+    "scripts": {
+        "start": "node cli.js"
+    },
+    "author": "Saish Narvekar",
+    "license": "ISC",
+    "bin": {
+        "dir-json": "./cli.js"
+    }
+}
