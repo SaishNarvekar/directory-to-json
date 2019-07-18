@@ -2,6 +2,9 @@
 
 const fs = require("fs");
 const path = require("path");
+const argv = require("yargs")
+    .alias("o", "output")
+    .usage("$0 [OPTION] [FILE]").argv;
 
 function dirTree(filename) {
     var stats = fs.lstatSync(filename);
@@ -20,4 +23,8 @@ function dirTree(filename) {
     return info;
 }
 
-console.log(JSON.stringify(dirTree("."),null,2));
+if (argv.o) {
+    fs.writeFileSync(argv.o, JSON.stringify(dirTree("."), null, 2));
+} else {
+    console.log(JSON.stringify(dirTree("."), null, 2));
+}
